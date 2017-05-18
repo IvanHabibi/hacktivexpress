@@ -11,7 +11,11 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  created(){
+    this.$store.commit('checkLogin')
+
+  }
 }
 </script>
 

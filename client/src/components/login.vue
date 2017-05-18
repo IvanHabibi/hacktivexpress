@@ -9,6 +9,7 @@
             <v-text-field
               name="input-1"
               label="username"
+              v-model='formLabelAlign.username'
             ></v-text-field>
           </v-col>
           <v-col xs4>
@@ -17,12 +18,15 @@
             <v-text-field
               name="input-1"
               label="password"
+              v-model='formLabelAlign.password'
+              type='password'
             ></v-text-field>
           </v-col>
           <v-col xs4>
           </v-col>
           <div>
-            <v-btn light default>Submit</v-btn>
+            <p>{{formLabelAlign.password}}</p>
+            <v-btn light default @click.native = 'login'>Submit</v-btn>
           </div>
         </v-row>
 
@@ -44,6 +48,13 @@ export default {
          password: ''
        }
      };
+   },
+   methods:{
+     login(){
+       let self = this
+       this.$store.dispatch('login',self.formLabelAlign)
+       self.$router.push('/')
+     }
    }
 }
 </script>
