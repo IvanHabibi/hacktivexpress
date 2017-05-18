@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
+
+    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet" type="text/css">
 
   <navbar></navbar>
     <router-view></router-view>

@@ -1,21 +1,36 @@
 <template lang="html">
+  <v-card class="grey lighten-4 elevation-0">
+    <v-card-text>
+      <v-container fluid>
+        <v-row row>
+          <v-col xs4>
+          </v-col>
+          <v-col xs8>
+            <v-text-field
+              name="input-1"
+              label="username"
+            ></v-text-field>
+          </v-col>
+          <v-col xs4>
+          </v-col>
+          <v-col xs8>
+            <v-text-field
+              name="input-1"
+              label="password"
+            ></v-text-field>
+          </v-col>
+          <v-col xs4>
+          </v-col>
+          <div>
+            <v-btn light default>Submit</v-btn>
+          </div>
+        </v-row>
 
 
-  <el-row :gutter="10">
-  <el-col :xs="8" :sm="6" :md="4" :lg="3">
-    <el-form :label-position="labelPosition" label-width="100px" :model="formLabelAlign">
-      <el-form-item label="Name">
-        <el-input v-model="formLabelAlign.name"></el-input>
-      </el-form-item>
-      <el-form-item label="Activity zone">
-        <el-input v-model="formLabelAlign.region"></el-input>
-      </el-form-item>
-      <el-form-item label="Activity form">
-        <el-input v-model="formLabelAlign.type"></el-input>
-      </el-form-item>
-    </el-form>
-  </el-col>
-</el-row>
+
+      </v-container>
+    </v-card-text>
+  </v-card>
 
 </template>
 
@@ -25,9 +40,8 @@ export default {
      return {
        labelPosition: 'right',
        formLabelAlign: {
-         name: '',
-         region: '',
-         type: ''
+         username: '',
+         password: ''
        }
      };
    }
